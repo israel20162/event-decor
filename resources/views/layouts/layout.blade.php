@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
-<body class=" mx-auto max-w-screen bg-gray-50  "  style=" scroll-behavior: smooth !important; ">
+<body class=" mx-auto max-w-screen bg-gray-50  " style=" scroll-behavior: smooth !important; ">
 
-    @include('components.header')
+    <x-header/>
     <main>
         {{ $slot }}
     </main>
@@ -31,9 +31,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src={{ asset('js/slick.js') }}></script>
-<script>
-
-</script>
+<script></script>
 
 
 
