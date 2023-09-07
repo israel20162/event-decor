@@ -1,4 +1,4 @@
-<section class="py-20" id="blog">
+<section class="py-20 !max-w-full" id="blog">
     <div class="container mx-auto px-4 md:px-0 text-center">
 
         <!-- Section Heading -->
@@ -8,7 +8,7 @@
         <div class="grid md:grid-cols-3 gap-12">
 
             @forelse ($posts as $post)
- <div class="bg-white rounded-lg shadow-md">
+ <div class="bg-white rounded-lg shadow-md max-w-[100vw] md:max-w-full">
                 <img src="{{ Storage::url($post->image) }}" alt="Blog Post Title" class="rounded-t-lg w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-4 capitalize"><a href="{{ route('blog.single', ['slug' => $post->slug]) }}" class="hover:text-blue-600">{{$post->title}}</a></h3>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             @empty
-
+<div class="col-span-3 text-3xl">No posts</div>
             @endforelse
 
             <!-- Single Blog Post Preview -->

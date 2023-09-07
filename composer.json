@@ -5,7 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.4.29||^8.0|^8.1",
+        "php": "^7.4.29",
         "asantibanez/livewire-calendar": "^2.2",
         "asantibanez/livewire-charts": "2.0",
         "fruitcake/laravel-cors": "^2.0",

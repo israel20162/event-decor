@@ -48,6 +48,7 @@
 
 
     @livewireScripts
+    @livewireCalendarScripts
 </body>
 
 </html>

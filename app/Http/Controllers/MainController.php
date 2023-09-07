@@ -30,7 +30,7 @@ class MainController extends Controller
 
     public function about()
     {
-        return view('about');
+        return view('about', ['settings' => Settings::first()]);
     }
 
     public function blog()

@@ -10,6 +10,15 @@ class Booking extends Model
     use HasFactory;
     protected $table = 'bookings'
     ;
-    protected $guarded = []
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'package',
+        'additional_notes',
+        'event_date',
+        'status',
+        
+    ]
     ;
 }

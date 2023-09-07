@@ -2,7 +2,7 @@
 <footer class="bg-gray-700 text-white py-6">
     <div class="container mx-auto px-4 md:px-0">
         <!-- Grid Layout for Footer Content -->
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid md:grid-cols-4 gap-x-8">
 
             <!-- About Company -->
             <div>
@@ -23,9 +23,9 @@
 
             <!-- Contact Info -->
             <div>
-                <h3 class="text-2xl font-bold mb-4 mzx-w-32">Contact Info</h3>
-                <ul class="space-y-2 text-gray-300 text-start whitespace-pre-wrap">
-                    <li><i class="fas fa-map-marker-alt mr-2"></i>{{$settings->contact_adress}}</li>
+                <h3 class="text-2xl font-bold mb-4 ">Contact Info</h3>
+                <ul class="space-y-2 text-gray-300 text-start ">
+                    <li class="whitespace-normal  text-start"><i class="fas fa-map-marker-alt mr-2"></i>{{$settings->contact_adress}}</li>
                     <li><i class="fas fa-phone mr-2"></i>{{$settings->contact_phone_number}}</li>
                     <li><i class="fas fa-envelope mr-2"></i> {{$settings->contact_email}}</li>
                 </ul>
@@ -44,7 +44,7 @@
         </div>
 
         <!-- Footer Bottom Bar (Optional) -->
-        <div class="border-t border-gray-700 mt-10 pt-10 text-center">
+        <div class="border-t border-gray-700 mt-10  text-center">
             <p class="text-gray-300">&copy; 2023 EventDecor Inc. All rights reserved.</p>
         </div>
     </div>

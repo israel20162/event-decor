@@ -16,7 +16,7 @@
     </div>
 
     <!-- Data Table -->
-    <table class="w-full no-scroll overflow-scroll">
+    <table class="w-full no-scroll bg-white !overflow-x-scroll">
         <!-- Table Header -->
         <thead>
             <tr>

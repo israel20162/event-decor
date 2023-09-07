@@ -1,13 +1,28 @@
-<nav x-data="{ open: true }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex flex-wrap flex-1 justify-center items-center">
                     <a href="{{ route('admin.dashboard') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
+                      <x-jet-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-jet-nav-link>
+                     <x-jet-nav-link href="{{ route('admin.packages') }}" :active="request()->routeIs('admin.packages')">
+                        {{ __('Packages') }}
+                    </x-jet-nav-link>
+                      <x-jet-nav-link href="{{ route('admin.images') }}" :active="request()->routeIs('admin.images')">
+                        {{ __('Images') }}
+                    </x-jet-nav-link>
+                     <x-jet-nav-link href="{{ route('admin.blog') }}" :active="request()->routeIs('admin.blog')">
+                        {{ __('Blog') }}
+                    </x-jet-nav-link>
+                     <x-jet-nav-link href="{{ route('admin.settings') }}" :active="request()->routeIs('admin.settings')">
+                        {{ __('Settings') }}
+                    </x-jet-nav-link>
                 </div>
 
                 <!-- Navigation Links -->
