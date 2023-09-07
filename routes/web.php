@@ -39,13 +39,16 @@ Route::middleware(['auth',
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'])->controller(AdminController::class)->group(function () {
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
-    Route::get('/settings', 'settings')->name('settings');
-    Route::get('/images', 'images')->name('images');
+    Route::get('/admin/dashboard', 'dashboard')->name('admin.dashboard');
+    Route::get('/admin/settings', 'settings')->name('admin.settings');
+    Route::get('/admin/images', 'images')->name('admin.images');
+    Route::get('/admin/blog', 'blog')->name('admin.blog');
+    Route::get('/admin/packages', 'packages')->name('admin.packages');
 
-    Route::delete('/image/delete/{image_id?}','imageDelete')->name('admin.images.destroy');
-    Route::post('/image/upload','imageUpload')->name('admin.images.store');
-    Route::post('/image/update','imageUpload')->name('admin.images.update');
+
+    Route::delete('/admin/image/delete/{image_id?}','imageDelete')->name('admin.images.destroy');
+    Route::post('/admin/image/upload','imageUpload')->name('admin.images.store');
+    Route::post('/admin/image/update','imageUpload')->name('admin.images.update');
 
 
 
@@ -55,8 +58,10 @@ Route::middleware(['auth',
 
 Route::controller(BlogController::class)->group(function () {
     Route::get('/blog', 'index')->name('blog');
-    Route::get('/blog/{slug?}', 'show')->name('blog.single');
- });
+    Route::get('/blog/{slug}', 'show')->name('blog.single');
+    Route::post('post/{postId?}/comment', 'addComment')->name('post.comment');
+
+});
 
  Route::controller(BookingController::class)->group(function(){
      Route::get('/booking/confirmation', 'confirmation')->name('booking.thankyou');

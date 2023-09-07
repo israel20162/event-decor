@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Package;
 use App\Models\Settings;
 use App\Models\SiteImage;
+use App\Models\BlogPost;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -19,7 +21,9 @@ class MainController extends Controller
             'image_paths'=>SiteImage::where('page','home')->pluck('file_path', 'name')->map(function ($file, $name) {
                 return ['name' => $name, 'file_path' => $file];
             })->toArray(),
-            'settings'=>Settings::first()
+            'settings'=>Settings::first(),
+             'blog_posts' => BlogPost::latest()->with('author')->paginate(3),
+            'packages' => Package::all(),
         ]);
 
     }
@@ -41,6 +45,6 @@ class MainController extends Controller
     }
     public function packages()
     {
-      return view('packages')
+      return view('packages',['packages' => Package::all()])
 ;    }
 }

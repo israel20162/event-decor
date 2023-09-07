@@ -10,11 +10,11 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+
     <!-- Styles -->
     @livewireStyles
     <link rel="stylesheet" href="{{ 'resources/css/app.css' }}">
-
-
 
     <!-- Scripts -->
 
@@ -45,6 +45,7 @@
 
     @stack('modals')
     @stack('scripts')
+
 
     @livewireScripts
 </body>

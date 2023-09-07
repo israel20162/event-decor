@@ -18,7 +18,7 @@ class ImageUpload extends Component
 
     public $page_name = 'home';
     public $search;
-  
+
     public function setPage($page)
     {
         $this->page = $page;
@@ -34,17 +34,21 @@ class ImageUpload extends Component
         ]);
 
 
-        $filePath = $this->image->store('images', 'public');
+
 
         // Store the image path in the database (adjust this to your needs)
         $image=SiteImage::find($this->image_id);
-
+        if($this->image){
+             $filePath = $this->image->store('images', 'public');
+        }
+ 
         $image->update([
             'name' => $this->imageName  ? $this->imageName : $image->name ,
             'file_path' => $filePath
         ]);
 
-        session()->flash('message', 'Image uploaded successfully.');
+
+        session()->flash('message', 'Image updated successfully.');
 
         // Reset fields
         $this->reset(['image', 'imageName']);

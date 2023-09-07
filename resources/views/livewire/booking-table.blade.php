@@ -70,6 +70,22 @@
                         @endif
                     </div>
                 </th>
+<th class="border px-4 py-2 cursor-pointer whitespace-nowrap " wire:click="sortBy('package')">
+                    <div class="flex justify-center items-center gap-1 text-lg">
+                        Package
+                        @if ($sortField === 'package')
+                            <span>
+                                @if ($sortDirection === 'asc')
+                                    <img src="{{ asset('svg/chevron-up.svg') }}" class="w-4 h-4"
+                                    alt="selctor">@else<img src="{{ asset('svg/chevron-down.svg') }}"
+                                        class="w-4 h-4" alt="selctor">
+                                @endif
+                            </span>
+                        @else
+                            <img src="{{ asset('svg/chevron-selector.svg') }}" class="w-4 h-4" alt="selctor">
+                        @endif
+                    </div>
+                </th>
                 <th class="border px-4 py-2 cursor-pointer whitespace-nowrap " wire:click="sortBy('event_date')">
                     <div class="flex justify-center items-center gap-1 text-lg">
                         Event Date
@@ -117,6 +133,7 @@
                     </td>
                     <td class="w-1/3 text-left py-3 px-4">{{ $booking->email }}</td>
                     <td class="w-1/3 text-left py-3 px-4">{{ $booking->phone }}</td>
+                     <td class="w-1/3 text-left py-3 px-4 capitalize">{{ $booking->package }}</td>
                     <td class="w-1/3 text-left py-3 px-4  whitespace-nowrap">
                         {{ date('M j,Y', strtotime($booking->event_date)) }}</td>
                     <td class="px-6 py-4 whitespace-nowrap">

@@ -21,7 +21,7 @@
                                  <span class="block sm:inline">{{ session('message') }}</span>
                         @endforeach
                     @endif
-                 
+
                     <form action="{{ route('feedback.store') }}" method="POST">
                         @csrf
                         <!-- Name -->
@@ -65,7 +65,7 @@
                    <img class='h-8 w-8' src="{{asset('svg/work-hours.svg')}}" alt="" srcset=""> <strong>Working Hours:</strong> {{$settings->working_hours}}
                 </p>
             </div>
-               
+
             </div>
 
 

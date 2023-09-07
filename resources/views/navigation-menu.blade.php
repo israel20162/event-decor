@@ -5,20 +5,26 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('admin.dashboard') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                      <x-jet-nav-link href="{{ route('images') }}" :active="request()->routeIs('images')">
+                     <x-jet-nav-link href="{{ route('admin.packages') }}" :active="request()->routeIs('admin.packages')">
+                        {{ __('Packages') }}
+                    </x-jet-nav-link>
+                      <x-jet-nav-link href="{{ route('admin.images') }}" :active="request()->routeIs('admin.images')">
                         {{ __('Images') }}
                     </x-jet-nav-link>
-                     <x-jet-nav-link href="{{ route('settings') }}" :active="request()->routeIs('settings')">
+                     <x-jet-nav-link href="{{ route('admin.blog') }}" :active="request()->routeIs('admin.blog')">
+                        {{ __('Blog') }}
+                    </x-jet-nav-link>
+                     <x-jet-nav-link href="{{ route('admin.settings') }}" :active="request()->routeIs('admin.settings')">
                         {{ __('Settings') }}
                     </x-jet-nav-link>
                 </div>
@@ -177,7 +183,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+            <x-jet-responsive-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>
@@ -255,16 +261,5 @@
     </div>
 </nav>
 @push('scripts')
-    <script>
-        document.getElementById('trigger').addEventListener('click', function() {
-            // alert('click')
-            var content = document.querySelector('.z-50')
-
-            if (content.style.display === 'none') {
-                content.style.display = 'block'; // or 'transparent'
-            } else {
-                content.style.display = 'none';
-            }
-        })
-    </script>
+      <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endpush

@@ -7,7 +7,7 @@
             <!-- About Company -->
             <div>
                 <h3 class="text-2xl font-bold mb-4">About Us</h3>
-                <p class="text-gray-300">At EventDecor Inc., we turn your event dreams into reality. Established in 2010, we've transformed numerous events into memorable experiences.</p>
+                <p class="text-gray-300 capitalize">At {{$settings->company_name}}, we turn your event dreams into reality. Established in {{$settings->company_established_year}}, we've transformed numerous events into memorable experiences.</p>
             </div>
 
             <!-- Quick Links -->
@@ -23,11 +23,11 @@
 
             <!-- Contact Info -->
             <div>
-                <h3 class="text-2xl font-bold mb-4">Contact Info</h3>
-                <ul class="space-y-2 text-gray-300">
-                    <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Event St, City</li>
-                    <li><i class="fas fa-phone mr-2"></i> (123) 456-7890</li>
-                    <li><i class="fas fa-envelope mr-2"></i> hello@eventdecor.com</li>
+                <h3 class="text-2xl font-bold mb-4 mzx-w-32">Contact Info</h3>
+                <ul class="space-y-2 text-gray-300 text-start whitespace-pre-wrap">
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>{{$settings->contact_adress}}</li>
+                    <li><i class="fas fa-phone mr-2"></i>{{$settings->contact_phone_number}}</li>
+                    <li><i class="fas fa-envelope mr-2"></i> {{$settings->contact_email}}</li>
                 </ul>
             </div>
 

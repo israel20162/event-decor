@@ -20,5 +20,7 @@
         "postcss": "^8.4.14",
         "tailwindcss": "^3.1.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "marked": "^7.0.5"
+    }
 }

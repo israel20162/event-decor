@@ -15,7 +15,16 @@ class CreateBlogPostsTable extends Migration
     {
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('author_id');
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->text('body');
+            $table->string('image')->nullable();
+            $table->boolean('is_published')->default(1);
             $table->timestamps();
+
+            $table->foreign('author_id')->references('id')->on('users')
+                ->onDelete('cascade');
         });
     }
 

@@ -65,7 +65,7 @@ class BookingController extends Controller
             'event_date' => Carbon::parse($data['event_date'])->format('M j,Y'),
             'phone' => $data['phone'],
             'status' => 'pending',
-            'package' => $request->input('package')
+            'package' => strtolower($request->input('package'))
         ]);
 
         // Optionally send a confirmation email or notification to admin

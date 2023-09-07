@@ -1,6 +1,6 @@
 
 
-<div class="shadow rounded  w-11/12 mx-8 p-8 mx-auto">
+<div class="shadow rounded  w-11/12 mx- p-8 mx-auto">
     @if (session()->has('message'))
         <div class="bg-green-100 text-green-700 py-4 ">
             {{ session('message') }}
@@ -43,6 +43,18 @@
             @enderror
         </div>
 
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Upload</button>
-    </form>
+        <div wire:loading.delay   class='text-green-500 '>
+      Uploading...
+        </div>
+
+        <div class="flex gap-1 items-center">
+              <div wire:loading.delay wire:target='uploadImage'  class='text-green-500 '>
+        <img src="{{asset('svg/spinner.svg')}}" class="h-16 w-16" alt="" srcset="">
+        </div>
+
+        <button type="submit" wire:loading.attr='disabled' class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Upload</button>
+
+        </div>
+
+       </form>
 </div>

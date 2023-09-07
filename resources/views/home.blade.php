@@ -9,7 +9,7 @@
 
     {{-- services --}}
 @include('sections.services')
-       
+
 
         {{-- About us --}}
     @include('sections.about',['settings'=>$settings])
@@ -62,89 +62,10 @@
 
 
 <!-- Pricing & Packages Section -->
-<section class="py-20 bg-gray-50" id="pricing">
-    <div class="container mx-auto px-4 md:px-0">
-
-        <!-- Section Heading -->
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4">Pricing & Packages</h2>
-            <p class="text-xl text-gray-600">Choose the best package that suits your event needs.</p>
-        </div>
-
-        <!-- Packages Grid -->
-        <div class="grid md:grid-cols-3 gap-12">
-
-            <!-- Basic Package -->
-            <div class="bg-white flex flex-col md:max-h-fit justify-evenly rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold mb-6">Basic</h3>
-                <p class="text-xl font-semibold mb-8">$499</p>
-                <ul class="mb-8 space-y-2 cursor-pointer text-gray-600">
-                    <li>- Venue Decoration</li>
-                    <li>- Seating Arrangements</li>
-                    <li>- Basic Lighting</li>
-                    <li>- Consultation</li>
-                </ul>
-                <a href="{{route('packages')}}" class="block w-full bg-blue-500 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors">Get Started</a>
-            </div>
-
-            <!-- Premium Package -->
-            <div class="bg-white flex flex-col md:max-h-fit justify-evenly rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold mb-6">Basic</h3>
-                <p class="text-xl font-semibold mb-8">$899</p>
-                <ul class="mb-8 space-y-2 cursor-pointer text-gray-600">
-                   <li>- Everything in Basic</li>
-                    <li>- Premium Lighting</li>
-                    <li>- Flower Arrangements</li>
-                    <li>- Custom Themes</li>
-                    <li>- On-site Support</li>
-                </ul>
-                <a href="{{route('packages')}}" class="block w-full bg-blue-500 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors">Get Started</a>
-            </div>
-
-            <!-- Elite Package -->
-           <div class="bg-white flex flex-col md:max-h-fit justify-evenly rounded-lg shadow-md p-8">
-                <h3 class="text-2xl font-bold mb-6">Basic</h3>
-                <p class="text-xl font-semibold mb-8">$1499</p>
-                <ul class="mb-8 space-y-2 cursor-pointer text-gray-600">
-                    <li>- Everything in Basic</li>
-                    <li>- Everything in premium</li>
-                    <li>- Premium Lighting</li>
-                    <li>- Flower Arrangements</li>
-                    <li>- Custom Themes</li>
-                    <li>- On-site Support</li>
-                </ul>
-                <a href="{{route('packages')}}" class="block w-full bg-blue-500 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors">Get Started</a>
-            </div>
-
-        </div>
-    </div>
-</section>
+@include('sections.packages',['packages'=>$packages])
 
 <!-- Blog Section -->
-<section class="py-20" id="blog">
-    <div class="container mx-auto px-4 md:px-0 text-center">
-
-        <!-- Section Heading -->
-        <h2 class="text-4xl font-bold mb-8">Latest From Our Blog</h2>
-
-        <!-- Blog Posts Grid -->
-        <div class="grid md:grid-cols-3 gap-12">
-
-            <!-- Single Blog Post Preview -->
-            <div class="bg-white rounded-lg shadow-md">
-                <img src="{{ asset('execution.svg') }}" alt="Blog Post Title" class="rounded-t-lg w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-4"><a href="#" class="hover:text-blue-600">Blog Post Title</a></h3>
-                    <p class="text-gray-600 mb-4">A brief description or excerpt from the blog post...</p>
-                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
-                </div>
-            </div>
-
-            <!-- ... (Repeat for other blog post previews) ... -->
-
-        </div>
-    </div>
-</section>
+@include('sections.blog-posts',['posts'=>$blog_posts])
 
 
 

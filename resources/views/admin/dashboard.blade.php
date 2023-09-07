@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="bg-slate-600 text-white p-4 rounded shadow text-center">
                                     <h2 class="text-2xl font-bold">Total Feedback</h2>
-                                    <p class="text-2xl">250</p>
+                                    <p class="text-2xl">{{$feedback->count()}}</p>
                                 </div>
                                 <div class="bg-green-500 text-white p-4 rounded shadow text-center">
                                     <h2 class="text-2xl font-bold">Total Revenue</h2>
@@ -44,10 +44,9 @@
 
                             <!-- Quick Actions -->
                             <div class="mb-8">
-                                <button class="bg-blue-500 text-white rounded p-4 mr-4 hover:bg-blue-600">Add New
-                                    Event</button>
-                                <button class="bg-green-500 text-white rounded p-4 mr-4 hover:bg-green-600">Manage
-                                    Inventory</button>
+                                <button class="bg-blue-500 text-white rounded p-4 mr-4 hover:bg-blue-600"> <a href="/admin/blog">Add New
+                                   Blog Post</a></button>
+                                <button class="bg-green-500 text-white rounded p-4 mr-4 hover:bg-green-600"><a href="/admin/settings">Settings</a></button>
                             </div>
 
                             <!-- Latest Bookings -->

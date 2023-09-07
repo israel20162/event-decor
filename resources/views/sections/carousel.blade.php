@@ -16,9 +16,9 @@
     <div class="absolute   top-0 left-0 right-0   transform ">
 
 
-        <section class="relative  bg-cover bg-center h-screen" style="background-image: url('path_to_hero_image.jpg');">
+        <section class="relative  bg-cover bg-center h-screen" style="">
             <!-- Semi-transparent overlay for better text visibility -->
-            <div class="absolute inset-0 bg-black opacity-50 md:max-h-[97%]"></div>
+            <div class="absolute inset-0 bg-black opacity-50 md:max-h-[99%]"></div>
 
             <!-- Content -->
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
